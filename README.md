@@ -1,4 +1,4 @@
-# project_wireless
+# ITCS424_Wireless And Mobile Computing
 
 * Coffee Shared
 
