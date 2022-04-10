@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267374809842",
+    "project_id": "wireless-project-9dba8",
+    "storage_bucket": "wireless-project-9dba8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267374809842:android:35396351cc1d6050ca766b",
+        "android_client_info": {
+          "package_name": "com.example.project_wireless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267374809842-j7boj3t36580v5ki2e9pk8e48vq1p28t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0BMG84R6-vYFWq87j2dr41wF_IxijCuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267374809842-j7boj3t36580v5ki2e9pk8e48vq1p28t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
