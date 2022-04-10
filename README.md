@@ -1,6 +1,6 @@
-# project_wireless
+# ITCS424_Wireless And Mobile Computing
 
-A new Flutter project.
+* Coffee Shared
 
 ## Getting Started
 
