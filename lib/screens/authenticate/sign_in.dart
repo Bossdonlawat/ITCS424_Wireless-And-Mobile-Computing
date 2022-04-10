@@ -29,7 +29,7 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Food Recipe'),
+        title: Text('Sign in to Coffee Shared'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
