@@ -15,7 +15,7 @@ class RecipeTile extends StatelessWidget {
         child: ListTile(
           leading: CircleAvatar(
             radius: 25.0,
-            backgroundColor: Colors.brown[recipe.rating],
+            backgroundColor: Colors.brown[recipe.strength],
             backgroundImage: AssetImage('assets/coffee_icon.png'),
           ),
           title: Text(recipe.name),

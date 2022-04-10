@@ -9,11 +9,11 @@
 
     final CollectionReference recipeCollection = FirebaseFirestore.instance.collection('recipe');
 
-    Future updateUserData(String sugars, String name, int rating) async {
+    Future updateUserData(String sugars, String name, int strength) async {
       return await recipeCollection.doc(uid).set({
         'sugars': sugars,
         'name': name,
-        'rating': rating,
+        'strength': strength,
       });
     }
 
@@ -22,13 +22,13 @@
         return Recipe(
             name: doc.get('name') ?? '',
             sugars: doc.get('sugars') ?? '0',
-            rating: doc.get('rating') ?? 0
+            strength: doc.get('strength') ?? 0
         );
       }).toList();
     }
 
     UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
-      return UserData(uid: uid, name: snapshot['name'], sugars: snapshot['sugars'], rating: snapshot['rating']);
+      return UserData(uid: uid, name: snapshot['name'], sugars: snapshot['sugars'], strength: snapshot['strength']);
     }
 
     Stream<List<Recipe>> get recipes {

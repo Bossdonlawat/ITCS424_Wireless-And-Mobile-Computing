@@ -1,7 +1,7 @@
 class Recipe {
   final String name;
   final String sugars;
-  final int rating;
+  final int strength;
 
-  Recipe({ required this.name, required this.sugars, required this.rating});
+  Recipe({ required this.name, required this.sugars, required this.strength});
 }

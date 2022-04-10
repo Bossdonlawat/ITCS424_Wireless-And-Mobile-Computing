@@ -18,7 +18,7 @@ class _SettingFormState extends State<SettingForm> {
 
   String? _currentName;
   String? _currentSugars;
-  int? _currentRating;
+  int? _currentStrength;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _SettingFormState extends State<SettingForm> {
             child: Column(
               children: <Widget>[
                 Text(
-                  'Update your recipe settings.',
+                  'Update your coffee.',
                   style: TextStyle(fontSize: 18.0),
                 ),
                 SizedBox(height: 20.0),
@@ -56,13 +56,13 @@ class _SettingFormState extends State<SettingForm> {
                   onChanged:(val) => setState(() => _currentSugars = val),
                 ),
                 Slider(
-                  value: (_currentRating ?? userData!.rating).toDouble(),
-                  activeColor: Colors.brown[_currentRating ?? userData!.rating],
-                  inactiveColor: Colors.brown[_currentRating ?? userData!.rating],
+                  value: (_currentStrength ?? userData!.strength).toDouble(),
+                  activeColor: Colors.brown[_currentStrength ?? userData!.strength],
+                  inactiveColor: Colors.brown[_currentStrength ?? userData!.strength],
                   min:100.0,
                   max: 900.0,
                   divisions: 8,
-                  onChanged: (val) => setState(() => _currentRating = val.round()),
+                  onChanged: (val) => setState(() => _currentStrength = val.round()),
                 ),
                 RaisedButton(
                     color: Colors.pink[400],
@@ -73,7 +73,7 @@ class _SettingFormState extends State<SettingForm> {
                     onPressed: () async {
                       if(_formKey.currentState!.validate()) {
                         await DatabaseService(uid: user.uid).updateUserData(
-                          _currentSugars ?? userData!.sugars,_currentName ?? userData!.name, _currentRating ?? userData!.rating
+                          _currentSugars ?? userData!.sugars,_currentName ?? userData!.name, _currentStrength ?? userData!.strength
                         );
                       }
                       Navigator.pop(context);
