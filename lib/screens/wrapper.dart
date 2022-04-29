@@ -7,6 +7,7 @@ import 'package:project_wireless/models/myuser.dart';
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // return either home or authenticate widget
     final myuser = Provider.of<Myuser?>(context);
     if (myuser == null) {
       return Authenticate();

@@ -16,7 +16,7 @@
         'strength': strength,
       });
     }
-
+// recipe list from snapshot
     List<Recipe> _recipeListFromSnapshot(QuerySnapshot snapshot) {
       return snapshot.docs.map((doc){
         return Recipe(

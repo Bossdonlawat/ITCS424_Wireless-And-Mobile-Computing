@@ -5,15 +5,17 @@ import 'package:project_wireless/services/database.dart';
 class AuthService {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  //create user obj based on firebaseuser
   Myuser? _userfromFirebase(User? user) {
     return user !=null? Myuser(uid: user.uid) : null;
   }
+  // auth change user stream
   Stream<Myuser?> get user {
     return _auth.authStateChanges().map((User? user) => _userfromFirebase(user));
   }
 
   // sign in anon
-  Future signInAnon() async {
+  /*Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
@@ -22,7 +24,7 @@ class AuthService {
       print(e.toString());
       return null;
     }
-  }
+  }*/
 
 // sign in with email and password
   Future signInWithEmailAndPassword(String email, String password) async {
@@ -41,7 +43,7 @@ class AuthService {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
-
+// create a new document for user with the uid
       await DatabaseService(uid: user!.uid).updateUserData('0', 'new recipe', 100);
 
       return _userfromFirebase(user);
